@@ -17,12 +17,11 @@ pipeline {
 
     stage('Push Images') {
       steps {
-        script {
-          docker.withRegistry('', 'docker-cred') {
-            docker.image("$BACKEND_IMAGE").push()
-            docker.image("$FRONTEND_IMAGE").push()
-          }
-        }
+        sh '''
+        docker login -u thota372 -p mOULI@6928
+        docker push $BACKEND_IMAGE
+        docker push $FRONTEND_IMAGE
+        '''
       }
     }
   }
