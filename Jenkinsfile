@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-    BACKEND_IMAGE = "yourdockerhubusername/backend:${BUILD_NUMBER}"
-    FRONTEND_IMAGE = "yourdockerhubusername/frontend:${BUILD_NUMBER}"
+    BACKEND_IMAGE = "thota372/backend:${BUILD_NUMBER}"
+    FRONTEND_IMAGE = "thota372/frontend:${BUILD_NUMBER}"
   }
 
   stages {
