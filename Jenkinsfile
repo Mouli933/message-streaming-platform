@@ -8,12 +8,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/Mouli933/message-streaming-platform.git'
-      }
-    }
-
     stage('Build Images') {
       steps {
         sh 'docker build -t $BACKEND_IMAGE ./backend'
